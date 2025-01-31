@@ -1,0 +1,41 @@
+.img {
+  border-radius: 20px;
+  box-shadow: 0 5px 8px rgb(255, 165, 217);
+  min-width: 35px;
+  max-width: 200px;
+  width: 30vw;
+  margin: auto;
+}
+
+.titulo {
+  color: white;
+  font-family: Nerko One, cursive;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+.fotos {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 35px;
+    padding: 10px;
+  }
+
+  .fotos {
+    display: flex;
+    gap: 3px;
+  }
+
+  .img {
+    min-width: 25px;
+    max-width: 170px;
+    width: 30vw;
+    height: 130px;
+  }
+}
