@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div>
-      <h1>Teclados Musicais</h1>
+      <h1 className={styles.h1}>Clínica</h1>
     </div>
   );
 }

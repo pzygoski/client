@@ -1,5 +1,5 @@
 .header {
-    background-color: rgb(9, 99, 151);
+    background-color: rgb(101, 190, 241);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,7 +24,7 @@
     padding: 15px;
     border-radius: 7px;
     font-family: 'Sour Gummy', serif;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 
@@ -47,38 +47,6 @@
     border-radius: 2px;
     position: absolute;
     transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.menuButton span:nth-child(1) {
-    top: 0;
-}
-
-.menuButton span:nth-child(2) {
-    top: 10px;
-}
-
-.menuButton span:nth-child(3) {
-    top: 20px;
-}
-
-.menuButton.open span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-}
-
-.menuButton.open span:nth-child(2) {
-    opacity: 0;
-}
-
-.menuButton.open span:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
-}
-
-.navMenu {
-    display: flex;
-}
-
-.logo {
-    border-radius: 100%;
 }
 
 @media (max-width: 729px) {
