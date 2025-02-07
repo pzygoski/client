@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap'); /*"Sour Gummy", serif*/
+
 .header {
     background-color: rgb(101, 190, 241);
     display: flex;
@@ -6,6 +8,7 @@
     padding: 10px;
     border-radius: 7px;
     margin: 4px;
+    font-family: "Sour Gummy", serif;
 }
 
 .p {
@@ -17,7 +20,7 @@
 
 .lista {
     list-style-type: none;
-    color: white;
+    color: rgb(0, 0, 0);
     display: flex;
     gap: 17px;
     justify-content: center;
@@ -27,7 +30,9 @@
     font-size: 20px;
 }
 
-
+.li:hover{
+    color: white;
+}
 
 .menuButton {
     display: none;

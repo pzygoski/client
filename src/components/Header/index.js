@@ -14,7 +14,7 @@ export default function Header() {
 
     return (
         <header className={styles.header}>
-            <Image className={styles.logo} src='' alt="Logo" width={140} height={90}/>
+            <Image className={styles.logo} src='/Image/logo.png' alt="Logo" width={120} height={90}/>
             
             <button onClick={alternarMenu} className={`${styles.menuButton} ${isMenuOpen ? styles.open : ''}`}>
 
@@ -22,13 +22,13 @@ export default function Header() {
 
             <nav className={`${styles.navMenu} ${isMenuOpen ? styles.showMenu : ''}`}>
                 <ul className={styles.lista}>
-                    <li>
+                    <li className={styles.li}>
                         <Link href="/">Médico</Link>
                     </li>
-                    <li>
-                        <Link href="/">Pasciente</Link>
+                    <li className={styles.li}>
+                        <Link href="/">Paciente</Link>
                     </li>
-                    <li>
+                    <li className={styles.li}>
                         <Link href="/">Consulta</Link>
                     </li>
                 </ul>
