@@ -6,7 +6,6 @@
   font-family: "Sour Gummy", serif;
   padding: 10px;
   padding-top: 20px;
-  
 }
 
 .p {
@@ -16,4 +15,14 @@
   margin: auto;
   font-size: 20px;
   padding: 10px;
+}
+
+.button {
+  margin: auto;
+  display: block;
+  margin-top: 35px;
+  padding: 10px;
+  border-radius: 15px;
+  font-family: "Sour Gummy", serif;
+  background-color: rgb(131, 198, 236);
 }
