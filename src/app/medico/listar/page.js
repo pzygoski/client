@@ -1,45 +1,41 @@
-"use client"; // Para usar useState e useEffect no Next.js
+'use client'
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react"
 
-export default function MedicoPage() {
+export default function Medicos() {
     const [medicos, setMedicos] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const listaMedicos = async () => {
+        try {
+            const response = await fetch('https://api-clinica-2a.onrender.com/medicos');
+            const dados = await response.json();
+            setMedicos(dados);
+        } catch {
+            console.error('Nenhum médico encontrado:', error)
+        } finally {
+            setLoading(false)
+        }
+    }
+
     useEffect(() => {
-        // Substitua pela URL correta da sua API quando estiver online
-        fetch("http://localhost:5000/medicos")  
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`Erro ${response.status}`);
-                }
-                return response.json();
-            })
-            .then((data) => {
-                setMedicos(data);
-                setLoading(false);
-            })
-            .catch((error) => {
-                console.error("Erro ao buscar médicos:", error);
-                setLoading(false);
-            });
-    }, []);
+        listaMedicos()
+    }, [])
 
     if (loading) {
-        return <p>Carregando médicos...</p>;
+        console.log('Carregando lista de médicos...')
     }
 
     return (
         <div>
-            <h1>Listagem de Médicos</h1>
             <table>
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>Email</th>
-                        <th>Especialidade</th>
+                        <th>nome</th>
+                        <th>telefone</th>
+                        <th>email</th>
+                        <th>especialidade</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -55,5 +51,5 @@ export default function MedicoPage() {
                 </tbody>
             </table>
         </div>
-    );
+    )
 }
