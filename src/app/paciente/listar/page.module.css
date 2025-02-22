@@ -1,0 +1,28 @@
+.h1 {
+    text-align: center;
+    color: rgb(101, 190, 241);
+    font-family: "Sour Gummy", serif;
+    padding: 10px;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
+.table {
+    margin: auto;
+    width: 74%;
+    border: 1px solid black;
+    background-color:  rgb(101, 190, 241);
+    font-family: "Sour Gummy", serif;
+}
+
+.th {
+    border: 1px solid black;
+    background-color: white;
+    padding: 10px;
+}
+
+.td {
+    padding: 13px 16px;
+    border: 1px solid black;
+    background-color: white;
+}

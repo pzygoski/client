@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from "react"
+import styles from './page.module.css'
 
 export default function Pacientes() {
     const [pacientes, setPacientes] = useState([])
@@ -28,24 +29,25 @@ export default function Pacientes() {
 
     return (
         <div>
-            <table>
+            <h1 className={styles.h1}>Lista de pacientes</h1>
+            <table className={styles.table}>
                 <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Nome</th>
-                        <th>Telefone</th>
-                        <th>Email</th>
-                        <th>CPF</th>
+                    <tr className={styles.tr}>
+                        <th className={styles.th}>ID</th>
+                        <th className={styles.th}>Nome</th>
+                        <th className={styles.th}>Telefone</th>
+                        <th className={styles.th}>Email</th>
+                        <th className={styles.th}>CPF</th>
                     </tr>
                 </thead>
                 <tbody>
                     {pacientes.map((paciente) => (
                         <tr key={paciente.id}>
-                            <td>{paciente.id}</td>
-                            <td>{paciente.nome}</td>
-                            <td>{paciente.telefone}</td>
-                            <td>{paciente.email}</td>
-                            <td>{paciente.cpf}</td>
+                            <td className={styles.td}>{paciente.id}</td>
+                            <td className={styles.td}>{paciente.nome}</td>
+                            <td className={styles.td}>{paciente.telefone}</td>
+                            <td className={styles.td}>{paciente.email}</td>
+                            <td className={styles.td}>{paciente.cpf}</td>
                         </tr>
                     ))}
                 </tbody>

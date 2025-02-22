@@ -1,5 +1,6 @@
 'use client'
 
+import styles from './page.module.css'
 import { useState, useEffect } from 'react';
 
 export default function listaConsulta() {
@@ -28,24 +29,25 @@ export default function listaConsulta() {
 
     return (
         <div>
-            <table>
+            <h1 className={styles.h1}>Lista de consultas</h1>
+            <table className={styles.table}>
                 <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Especialidade</th>
-                        <th>Médico</th>
-                        <th>Paciente</th>
-                        <th>Tipo</th>
+                    <tr className={styles.tr}>
+                        <th className={styles.th}>ID</th>
+                        <th className={styles.th}>Especialidade</th>
+                        <th className={styles.th}>Médico</th>
+                        <th className={styles.th}>Paciente</th>
+                        <th className={styles.th}>Tipo</th>
                     </tr>
                 </thead>
                 <tbody>
                     {consulta.map((consulta) => (
                         <tr key={consulta.id}>
-                            <td>{consulta.id}</td>
-                            <td>{consulta.especialidade}</td>
-                            <td>{consulta.medico}</td>
-                            <td>{consulta.paciente}</td>
-                            <td>{consulta.tipo}</td>
+                            <td className={styles.td}>{consulta.id}</td>
+                            <td className={styles.td}>{consulta.especialidade}</td>
+                            <td className={styles.td}>{consulta.medico}</td>
+                            <td className={styles.td}>{consulta.paciente}</td>
+                            <td className={styles.td}>{consulta.tipo}</td>
                         </tr>
                     ))}
                 </tbody>
