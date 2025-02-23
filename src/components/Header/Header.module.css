@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap'); /*"Sour Gummy", serif*/
 
+/* Estilos do header */
 .header {
     display: flex;
     font-size: 18px;
@@ -26,19 +27,24 @@
 
 .navMenu {
     display: flex;
+    align-items: center;
+    gap: 15px; /* Espaçamento mais compacto entre os itens */
+    transition: transform 0.3s ease;
+    transform: translateX(0); /* Inicia com o menu visível */
 }
 
 .lista {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px; /* Ajuste no espaçamento entre os itens */
     margin-right: 20px;
 }
 
 .li {
     position: relative;
-    padding: 10px;
+    padding: 5px 10px; /* Menor padding para os itens */
     cursor: pointer;
+    font-size: 16px; /* Ajuste no tamanho da fonte */
 }
 
 .submenu {
@@ -65,4 +71,60 @@
 
 .submenu li:hover {
     background: #f4f4f4;
+}
+
+/* Responsividade: botão de menu e menu em telas pequenas */
+@media (max-width: 525px) {
+    .menuButton {
+        display: block;
+    }
+
+    .logo {
+        width: 70px;
+    }
+
+    .navMenu {
+        display: flex;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(131, 198, 236);
+        border-top: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 20;
+        transform: translateX(-100%); 
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
+        margin-top: 15px;
+    }
+
+    .navMenu.showMenu {
+        transform: translateX(0);
+    }
+
+    .lista {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        gap: 30px; 
+    }
+
+    .li {
+        padding: 5px;
+        text-align: center;
+        border-bottom: none;
+    }
+
+    .submenu {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .submenu li {
+        padding: 10px;
+        text-align: center;
+    }
 }

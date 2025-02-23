@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import styles from './page.module.css'
 import { useEffect, useState } from "react"
@@ -61,36 +61,38 @@ export default function Medicos() {
                 </div>
             )}
 
-            <table className={styles.table}>
-                <thead>
-                    <tr className={styles.tr}>
-                        <th className={styles.th}>ID</th>
-                        <th className={styles.th}>Nome</th>
-                        <th className={styles.th}>Telefone</th>
-                        <th className={styles.th}>Email</th>
-                        <th className={styles.th}>Especialidade</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {medicosFiltrados.length > 0 ? (
-                        medicosFiltrados.map((medico) => (
-                            <tr key={medico.id}>
-                                <td className={styles.td}>{medico.id}</td>
-                                <td className={styles.td}>{medico.nome}</td>
-                                <td className={styles.td}>{medico.telefone}</td>
-                                <td className={styles.td}>{medico.email}</td>
-                                <td className={styles.td}>{medico.especialidade}</td>
-                            </tr>
-                        ))
-                    ) : (
-                        <tr>
-                            <td colSpan="5" className={styles.td}>
-                                Nenhum médico encontrado.
-                            </td>
+            <div className={styles.tableContainer}>
+                <table className={styles.table}>
+                    <thead>
+                        <tr className={styles.tr}>
+                            <th className={styles.th}>ID</th>
+                            <th className={styles.th}>Nome</th>
+                            <th className={styles.th}>Telefone</th>
+                            <th className={styles.th}>Email</th>
+                            <th className={styles.th}>Especialidade</th>
                         </tr>
-                    )}
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                        {medicosFiltrados.length > 0 ? (
+                            medicosFiltrados.map((medico) => (
+                                <tr key={medico.id}>
+                                    <td className={styles.td}>{medico.id}</td>
+                                    <td className={styles.td}>{medico.nome}</td>
+                                    <td className={styles.td}>{medico.telefone}</td>
+                                    <td className={styles.td}>{medico.email}</td>
+                                    <td className={styles.td}>{medico.especialidade}</td>
+                                </tr>
+                            ))
+                        ) : (
+                            <tr>
+                                <td colSpan="5" className={styles.td}>
+                                    Nenhum médico encontrado.
+                                </td>
+                            </tr>
+                        )}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 }

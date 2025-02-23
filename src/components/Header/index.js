@@ -17,7 +17,10 @@ export default function Header() {
         <header className={styles.header}>
             <Image className={styles.logo} src='/Image/logo.png' alt="Logo" width={100} height={90} />
 
-            <button onClick={alternarMenu} className={`${styles.menuButton} ${isMenuOpen ? styles.open : ''}`}>
+            <button 
+                onClick={alternarMenu} 
+                className={`${styles.menuButton} ${isMenuOpen ? styles.open : ''}`}
+            >
                 ☰
             </button>
 
