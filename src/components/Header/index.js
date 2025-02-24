@@ -65,7 +65,7 @@ export default function Header() {
                         <Link href="/consulta">Consulta</Link>
                         {hoveredItem === "Consulta" && (
                             <ul className={styles.submenu}>
-                                <li><Link href="./consulta">Listar</Link></li>
+                                <li><Link href="/consulta">Listar</Link></li>
                                 <li><Link href="/consulta/adicionar">Adicionar</Link></li>
                                 <li><Link href="/consulta/editar">Editar</Link></li>
                                 <li><Link href="/consulta/excluir">Excluir</Link></li>
