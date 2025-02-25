@@ -21,10 +21,6 @@ export default function Medicos() {
         }
     };
 
-    const mostrar = () => {
-        setMostrarDiv(!mostrarDiv);
-    };
-
     const valorInput = (e) => {
         setBusca(e.target.value);
     };
@@ -44,13 +40,8 @@ export default function Medicos() {
     return (
         <div>
             <h1 className={styles.h1}>Lista de médicos</h1>
-
-            <button className={styles.button} onClick={mostrar}>
-                Buscar Médicos
-            </button>
-
-            {mostrarDiv && (
-                <div className={styles.divBuscar}>
+            
+            <div className={styles.divBuscar}>
                     <input
                         className={styles.input}
                         type="text"
@@ -58,8 +49,7 @@ export default function Medicos() {
                         onChange={valorInput}
                         placeholder="Digite o nome do médico"
                     />
-                </div>
-            )}
+            </div>
 
             <div className={styles.tableContainer}>
                 <table className={styles.table}>
